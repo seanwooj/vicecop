@@ -1,4 +1,7 @@
 #login
+  .login-greeting
+    %h4 Great to see you again!
+    %p Always remember that every day is a new day and a new step forward.
   %form{'ng-submit' => 'login()'}
     .input-group
       %input.form-control{:type => 'email', :placeholder => 'Email', 'ng-model' => 'user.email'}
