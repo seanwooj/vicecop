@@ -1,0 +1,17 @@
+// Fight the default
+// and include mixins.
+.btn {
+
+  border-radius: 0;
+
+  &.btn-full-width {
+    width: 100%;
+  }
+
+  &.btn-primary-caps {
+    padding: 10px 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+}

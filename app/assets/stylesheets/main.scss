@@ -1,0 +1,42 @@
+@import 'components/_buttons.scss';
+
+
+
+
+body {
+  font-family: 'proxima-nova', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+#body-content {
+  // THIS MARGIN IS TO PREVENT THE FIXED TOP FROM COVERING EVERYTHING UP
+  margin-top: 60px;
+}
+
+#login, #register {
+  .input-group {
+    width: 100%;
+    margin-bottom: 10px;
+
+    input {
+      border: 1px solid transparent;
+      border-bottom: 1px #E2E2E2 solid;
+      box-shadow: none;
+      &:focus {
+        box-shadow: none;
+        border-color: transparent;
+        border-bottom: 1px solid #66afe9;
+      }
+    }
+  }
+
+  .login-small-print {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    a { display: block; margin-bottom: 5px; }
+
+    p {
+      a { display: inline }
+    }
+  }
+}
