@@ -10,13 +10,22 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+//  VENDORED
 //= require jquery
 //= require jquery_ujs
 //= require angular
 //= require angular-rails-templates
 //= require angular-ui-router
 //= require angular-devise
-//= require_tree ./templates
+//= require bootstrap/js/collapse
+
+
+//  APPLICATION FILES
+//= require ./app
+//= require ./config
+//= require_tree ../templates
 //= require_tree ./modules
 //= require_tree ./filters
 //= require_tree ./directives
