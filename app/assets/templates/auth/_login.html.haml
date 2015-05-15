@@ -5,5 +5,5 @@
     .input-group
       %input.form-control{:type => 'password', :placeholder => 'Password', 'ng-model' => 'user.password'}
 
-    %div{'ng-include' => "'auth/_small_print.html'"}
-    %input.btn.btn-full-width.btn-primary.btn-primary-caps{:type => 'submit', :value => 'Log In'}
+    .login-small-print{'ng-include' => "'auth/_small_print.html'"}
+    %input.btn.btn-full-width.btn-primary{:type => 'submit', :value => 'Login'}
