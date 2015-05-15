@@ -19,4 +19,4 @@
           %a{:href => "#/profile"} 
             {{ user.username }} 
         %li{'ng-show' => "signedIn()"}
-          %a{:href => "#/logout"} Log Out
+          %a{'ng-click' => "logout()"} Log Out
