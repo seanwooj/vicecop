@@ -27,7 +27,4 @@
 //= require ./config
 //= require_tree ../templates
 //= require_tree ./modules
-//= require_tree ./filters
-//= require_tree ./directives
-//= require_tree ./services
 //= require_tree ./controllers
