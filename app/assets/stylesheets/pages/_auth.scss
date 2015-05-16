@@ -1,0 +1,35 @@
+#login, #register {
+  .input-group {
+    width: 100%;
+    margin-bottom: 10px;
+
+    input {
+      border: 1px solid transparent;
+      border-bottom: 1px #E2E2E2 solid;
+      box-shadow: none;
+      &:focus {
+        box-shadow: none;
+        border-color: transparent;
+        border-bottom: 1px solid #66afe9;
+      }
+    }
+  }
+
+  .login-greeting {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .login-small-print {
+    padding: 15px 0;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    a { display: block; margin-bottom: 5px; }
+
+    p {
+      a { display: inline }
+    }
+  }
+}

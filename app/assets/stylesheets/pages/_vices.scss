@@ -3,11 +3,27 @@
     padding: 10px 10px 20px 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
+    position: relative;
+    display: block;
+    color: black;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
 
     .user-vice-name {
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: 700;
       text-transform: uppercase;
+    }
+
+    .user-vice-description {
+      color: #999;
+    }
+    
+    .user-vice-arrow-right {
+      position: absolute;
+      top: 24px; right: 10px;
     }
   }
 }

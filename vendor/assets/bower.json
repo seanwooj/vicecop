@@ -4,6 +4,7 @@
     "bootstrap": "latest",
     "angular": "latest",
     "angular-ui-router": "latest",
-    "angular-devise": "latest"
+    "angular-devise": "latest",
+    "foundation-icon-fonts": "latest"
   }
 }
