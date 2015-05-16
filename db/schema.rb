@@ -11,11 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515205723) do
+ActiveRecord::Schema.define(version: 20150516032304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "checkins", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "user_vice_id"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "note"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "user_vices", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "vice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -38,9 +56,11 @@ ActiveRecord::Schema.define(version: 20150515205723) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "vices", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "vices", ["name"], name: "index_vices_on_name", unique: true, using: :btree
 
 end

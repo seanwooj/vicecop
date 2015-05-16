@@ -24,7 +24,7 @@
 
 //  APPLICATION FILES
 //= require ./app
-//= require ./config
 //= require_tree ../templates
-//= require_tree ./modules
+//= require_tree ./services
+//= require_tree ./routers
 //= require_tree ./controllers
