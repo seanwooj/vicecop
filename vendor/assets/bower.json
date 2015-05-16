@@ -1,10 +1,11 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap": "latest",
+    "bootstrap-sass": "latest",
     "angular": "latest",
     "angular-ui-router": "latest",
     "angular-devise": "latest",
+    "bootstrap": "latest",
     "foundation-icon-fonts": "latest"
   }
 }
