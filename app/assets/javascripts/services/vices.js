@@ -8,6 +8,12 @@ window.app.factory('vices', [
         });
       },
 
+      get: function (id) {
+        $http.get('/user_vices/' + id + '.json').then(function (res) {
+          return res.data;
+        });
+      },
+
       vices: []
     }
 
