@@ -2,8 +2,14 @@
 $icon-font-path: '/assets/bootstrap-sass/assets/fonts/bootstrap/';
 @import 'bootstrap-sass/assets/stylesheets/_bootstrap';
 
+// Base
+@import 'base/_clearfix.scss';
+
 // Components
 @import 'components/_buttons.scss';
+
+// Layout Components
+@import 'layouts/_headers';
 
 // Page Components
 @import 'pages/_vices.scss';
@@ -17,6 +23,6 @@ body {
 
 #body-content {
   // THIS MARGIN IS TO PREVENT THE FIXED TOP FROM COVERING EVERYTHING UP
-  margin-top: 60px;
+  // margin-top: 60px;
 }
 

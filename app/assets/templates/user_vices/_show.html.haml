@@ -1,4 +1,21 @@
-%h3 {{ userVice.vice.name }}
+.section-header
+  %h3 {{ userVice.vice.name }}
 
-.checkins{'ng-repeat' => 'checkin in userVice.checkins'}
-  .note {{ checkin.note }}
+.add-checkin
+  %a.btn-checkin{:href => '#/user_vices/{{ userVice.id }}/checkin'}
+    %span.glyphicon.glyphicon-plus
+
+.checkins
+  %h4 Checkins
+  %div{'ng-show' => 'userVice.checkins.length', 'ng-repeat' => 'checkin in userVice.checkins | orderBy: "created_at": true'}
+    .checkin
+      .note {{ checkin.note }}
+      .time-meta.cf
+        .time 
+          /{{ moment(checkin.created_at).format('h:mm a')}}
+          %span.glyphicon.glyphicon-time
+          {{ moment(checkin.created_at).fromNow(true)}}
+
+  %div{'ng-hide' => 'userVice.checkins.length'}
+    %h4 No Check Ins! Hooray!
+    %p If you need to check in, push the + button.

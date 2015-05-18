@@ -20,6 +20,7 @@
 //= require angular-ui-router
 //= require angular-devise
 //= require bootstrap/js/collapse
+//= require moment
 
 
 //  APPLICATION FILES
