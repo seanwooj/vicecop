@@ -17,7 +17,7 @@ window.app.config([
       state('user_vice_checkin', { 
         url: '/user_vices/{id}/checkin',
         templateUrl: 'user_vices/_checkin.html',
-        contoller: 'UserVicesController',
+        controller: 'UserVicesController',
         resolve: {
           userVice: ['vices', '$stateParams', function (vices, $stateParams) {
             return vices.get($stateParams.id);

@@ -14,6 +14,10 @@ window.app.factory('vices', [
         });
       },
 
+      addCheckin: function (id, checkin) {
+        return $http.post('/user_vices/' + id + '/checkins.json', checkin);
+      },
+
       vices: []
     }
 
