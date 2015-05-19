@@ -48,6 +48,14 @@
     font-weight: 100;
     padding: 10px;
     border-bottom: 1px solid darken($brand-primary, 10%);
+    .checkin-thumbnail {
+      height: 100px; width: 100px;
+      display: inline-block;
+      img {
+        width: 100%;
+      }
+    }
+
     .glyphicon {
       color: rgba(0,0,0,0.3);
       position: relative;

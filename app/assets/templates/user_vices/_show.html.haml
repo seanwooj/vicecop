@@ -16,7 +16,7 @@
     .checkin
       .checkin-thumbnail{'ng-show' => 'checkin.attached_images.length'}
         %img{'ng-src' => '{{ checkin.attached_images[0].thumbnail_url }}' }
-      .note 
+      .note{'ng-class' => '{"thumbnail-attached": checkin.attached_images.length}'}
         %span.glyphicon.glyphicon-comment
         {{ checkin.note }}
       .time-meta.cf
