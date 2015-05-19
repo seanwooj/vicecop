@@ -4,6 +4,7 @@ $icon-font-path: '/assets/bootstrap-sass/assets/fonts/bootstrap/';
 
 // Base
 @import 'base/_clearfix.scss';
+@import 'base/_animation.scss';
 
 // Components
 @import 'components/_buttons.scss';
@@ -23,4 +24,3 @@ body {
 #body-content {
   padding-top: 20px;
 }
-

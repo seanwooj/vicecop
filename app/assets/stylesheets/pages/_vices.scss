@@ -1,11 +1,14 @@
 .user-vices {
   .user-vice {
-    padding: 10px 10px 20px 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #E6F6FD;
+    background: darken($brand-primary, 5%);
+    color: rgba(255,255,255,.9);
+    font-weight: 100;
+    padding: 10px;
+    border-bottom: 1px solid darken($brand-primary, 10%);
+
     position: relative;
     display: block;
-    color: black;
+    color: rgba(255,255,255,0.9);
 
     &:hover, &:active, &:focus {
       text-decoration: none;
@@ -13,13 +16,12 @@
 
     .user-vice-name {
       font-size: 1.3em;
-      font-weight: 300;
-      text-transform: uppercase;
+      font-weight: 100;
     }
 
     .user-vice-description {
-      color: #999;
-      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      font-weight: 100;
     }
     
     .user-vice-arrow-right {

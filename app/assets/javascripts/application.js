@@ -21,6 +21,7 @@
 //= require angular-devise
 //= require bootstrap/js/collapse
 //= require moment
+//= require angular-animate
 
 
 //  APPLICATION FILES
