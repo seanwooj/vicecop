@@ -22,6 +22,7 @@
 //= require bootstrap/js/collapse
 //= require moment
 //= require angular-animate
+//= require ng-file-upload
 
 
 //  APPLICATION FILES

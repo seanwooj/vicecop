@@ -8,6 +8,7 @@
     "bootstrap": "latest",
     "foundation-icon-fonts": "latest",
     "moment": "latest",
-    "angular-animate": "latest"
+    "angular-animate": "latest",
+    "ng-file-upload": "latest"
   }
 }

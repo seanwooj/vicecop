@@ -13,9 +13,13 @@
                 %span.glyphicon.glyphicon-map-marker
                 Add Location
             .image
-              %a{:href => '#'}
+              %a{"ng-model" => "files", "ngf-select" => "", 'ng-class' => "{'uploaded' : image}"}
                 %span.glyphicon.glyphicon-camera
-                Add Photo
+                %span{'ng-hide' => 'image'}
+                  Add Photo
+                %span{'ng-show' => 'image'}
+                  Photo Uploaded
+                  %span.glyphicon.glyphicon-ok
           .checkin-note
             %textarea{'ng-model' => 'note', :placeholder => "What's going on? How were you feeling before you did this? What could you do to prevent it in the future?"}
           %button.btn.btn-white.btn-full-width{:type => 'submit'}

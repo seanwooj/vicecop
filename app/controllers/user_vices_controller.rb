@@ -9,8 +9,8 @@ class UserVicesController < ApplicationController
   end
 
   def show
-    if current_user && user_vice = current_user.user_vices.find(params[:id])
-      render :json => user_vice, :include => [:vice, :checkins]
+    if current_user && @user_vice = current_user.user_vices.find(params[:id])
+      render 'user_vices/show'
     else
       render :json => {}, :status => :unauthorized
     end

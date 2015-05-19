@@ -16,6 +16,7 @@ gem 'angular_rails_csrf'
 gem 'haml-rails'
 gem 'unicorn'
 gem 'devise'
+gem 'paperclip'
 
 
 group :development, :test do
