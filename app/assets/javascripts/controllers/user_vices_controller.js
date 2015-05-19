@@ -15,13 +15,5 @@ window.app.controller('UserVicesController', [
       });
       $scope.note = '';
     };
-
-    $scope.addLocation = function () {
-      if('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          $scope.position = position;
-        });
-      }
-    }
   }
 ]);

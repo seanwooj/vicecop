@@ -76,7 +76,9 @@
 
 .new-checkin {
   .checkin-bar {
-
+    div {
+      display: inline-block
+    }
   }
 
   form {
