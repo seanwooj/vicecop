@@ -1,10 +1,41 @@
+nav.navbar {
+  border-bottom: none;
+  .navbar-header {
+    background: $brand-primary;
+    color: white;
+    .navbar-brand {
+      color: white;
+    }
+    .navbar-toggle {
+      background: transparent;
+      border-color: white;
+      .icon-bar {
+        background: white;
+      }
+    }
+  }  
+}
+
 .section-header {
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: center;
-  border-bottom: 1px solid #E6F6FD;
-  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    color: black;
   }
+}
+
+.section-subheader {
+  background: white;
+  padding: 10px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 0;
 }

@@ -19,10 +19,10 @@ $icon-font-path: '/assets/bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   font-family: 'proxima-nova', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  background: lighten($brand-primary, 5%);
 }
 
 #body-content {
-  // THIS MARGIN IS TO PREVENT THE FIXED TOP FROM COVERING EVERYTHING UP
-  // margin-top: 60px;
+  padding-top: 20px;
 }
 

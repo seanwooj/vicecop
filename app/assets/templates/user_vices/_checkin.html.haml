@@ -1,11 +1,14 @@
 .section-header
-  %h3 Check In
+  %h3 New Event
 
-.new-checkin
-  .checkin-bar
+#body-content.container-fluid
+  .row
+    .col-md-8.col-md-offset-2
+      .new-checkin
+        .checkin-bar
 
-  %form{'ng-submit' => 'addCheckin()'}
-    .checkin-note
-      %textarea{'ng-model' => 'note', :placeholder => "What's going on? How were you feeling before you did this? What could you do to prevent it in the future?"}
-    %button.btn.btn-primary.btn-full-width{:type => 'submit'}
-      Every moment is a new moment.
+        %form{'ng-submit' => 'addCheckin()'}
+          .checkin-note
+            %textarea{'ng-model' => 'note', :placeholder => "What's going on? How were you feeling before you did this? What could you do to prevent it in the future?"}
+          %button.btn.btn-white.btn-full-width{:type => 'submit'}
+            Every moment is a new moment.

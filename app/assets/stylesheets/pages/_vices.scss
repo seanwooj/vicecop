@@ -33,6 +33,7 @@
 
 .add-checkin {
   text-align: center;
+  margin-bottom: 10px;
   .btn-checkin {
 
   }
@@ -40,11 +41,21 @@
 
 .checkins {
   .checkin {
-    border: 1px solid black;
-    margin-bottom: 10px;
+    background: darken($brand-primary, 5%);
+    color: rgba(255,255,255,.9);
+    font-weight: 100;
     padding: 10px;
+    border-bottom: 1px solid darken($brand-primary, 10%);
+    .glyphicon {
+      color: rgba(0,0,0,0.3);
+      position: relative;
+      top: 2px;
+    }
+
     .time-meta {
       font-size: 12px;
+      font-weight: 500;
+      color: rgba(0,0,0, 0.3);
       text-transform: uppercase;
       .date {
         float: left;
@@ -70,10 +81,29 @@
 
   form {
     .checkin-note {
+      ::-webkit-input-placeholder {
+         color: rgba(255,255,255,0.6);
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+         color: rgba(255,255,255,0.6);  
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+         color: rgba(255,255,255,0.6);  
+      }
+
+      :-ms-input-placeholder {  
+         color: rgba(255,255,255,0.6);  
+      }
+
       textarea {
         width: 100%;
         height: 200px;
         border: none;
+        background: #1389C0;
+        color: white;
+        padding: 10px;
 
         &:focus {
           border: none;
@@ -86,7 +116,7 @@
 
 .btn-checkin {
   padding: 20px;
-  background: #337AB7;
+  background: $brand-primary;
   color: white;
   display: inline-block;
 }
