@@ -9,6 +9,6 @@ class AttachedImage < ActiveRecord::Base
   end
 
   def thumbnail_url
-    image.url(:thumbnail)
+    image.url(:thumb)
   end
 end

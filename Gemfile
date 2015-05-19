@@ -17,6 +17,7 @@ gem 'haml-rails'
 gem 'unicorn'
 gem 'devise'
 gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
 
 
 group :development, :test do

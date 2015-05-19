@@ -33,5 +33,15 @@ module Vicecop
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     config.assets.paths << Rails.root.join('app', 'assets', 'templates')
+
+
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => "vicecop_#{Rails.env}",
+        :access_key_id => ENV['S3_API_KEY'],
+        :secret_access_key => ENV['S3_SECRET_KEY']
+      }
+    }
   end
 end
