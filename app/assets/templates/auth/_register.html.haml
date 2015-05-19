@@ -1,4 +1,6 @@
-#register
+.section-header
+  %h3 Register
+#register.container-fluid
   %form{'ng-submit' => 'register()'}
     .input-group
       %input.form-control{:type => 'email', :placeholder => 'Email', 'ng-model' => 'user.email'}

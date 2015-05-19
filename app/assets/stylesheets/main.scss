@@ -15,8 +15,6 @@ $icon-font-path: '/assets/bootstrap-sass/assets/fonts/bootstrap/';
 @import 'pages/_vices.scss';
 @import 'pages/_auth.scss';
 
-
-
 body {
   font-family: 'proxima-nova', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   background: lighten($brand-primary, 5%);
