@@ -11,9 +11,17 @@ window.app.controller('UserVicesController', [
       })
       .success(function (checkin) {
         $scope.userVice.checkins.push(checkin);
+        $state.go('user_vice', {id: $stateParams.id});
       });
-      $state.go('user_vice', {id: $stateParams.id});
       $scope.note = '';
+    };
+
+    $scope.addLocation = function () {
+      if('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          $scope.position = position;
+        });
+      }
     }
   }
 ]);
