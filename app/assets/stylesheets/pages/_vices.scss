@@ -1,5 +1,5 @@
 .user-vices {
-  .user-vice {
+  .user-vice, .new-vice {
     background: darken($brand-primary, 5%);
     color: rgba(255,255,255,.9);
     font-weight: 100;
@@ -142,4 +142,13 @@
   background: $brand-primary;
   color: white;
   display: inline-block;
+}
+
+.search-or-add {
+  background: lighten($brand-primary, 10%);
+  padding: 10px;
+  input {
+    width: 100%;
+    padding: 5px;
+  }
 }

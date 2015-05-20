@@ -4,6 +4,26 @@ window.app.config([
   function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
+      .state('add_user_vice',{
+        url: '/user_vices/add',
+        templateUrl: 'user_vices/_add.html',
+        controller: 'AddUserVicesController',
+        resolve: {
+          vice: ['vices', function (vices) {
+            return vices.getAllVices();
+          }]
+        }
+      })
+      .state('vice', {
+        url: '/vices/{id}',
+        templateUrl: 'vices/_show.html',
+        controller: 'VicesController',
+        resolve: {
+          vice: ['vices', '$stateParams', function (vices, $stateParams) {
+            return vices.getVice($stateParams.id);
+          }]
+        }
+      })
       .state('user_vice', {
         url: '/user_vices/{id}',
         templateUrl: 'user_vices/_show.html',

@@ -1,5 +1,8 @@
 .section-header
   %h3 Vices
+
+%a.btn-checkin.btn-full-width.btn{:href => '#/user_vices/add'}
+  %span.glyphicon.glyphicon-plus
 .user-vices{'ng-repeat' => 'userVice in vices'}
   %a.user-vice{:href => '#/user_vices/{{userVice.id}}'}
     .user-vice-name
