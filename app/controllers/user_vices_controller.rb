@@ -22,7 +22,7 @@ class UserVicesController < ApplicationController
   end
 
   def show
-    if current_user && @user_vice = current_user.user_vices.find(params[:id])
+    if current_user && @user_vice = current_user.user_vices.includes(:checkins => [:attached_images]).find(params[:id])
       render 'user_vices/show'
     else
       render :json => {}, :status => :unauthorized
