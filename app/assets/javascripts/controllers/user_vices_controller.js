@@ -32,7 +32,11 @@ window.app.controller('UserVicesController', [
             url: '/attached_images.json',
             file: file,
             fields: {name: file.name}
-          }).success(function(data, status, headers, config) {
+          })
+          .progress(function (evt) {
+            $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+          })
+          .success(function(data, status, headers, config) {
             $scope.image = data;
           });
         }

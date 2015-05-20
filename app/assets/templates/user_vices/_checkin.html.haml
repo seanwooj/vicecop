@@ -16,7 +16,8 @@
               %a{"ng-model" => "files", "ngf-select" => "", 'ng-class' => "{'uploaded' : image}"}
                 %span.glyphicon.glyphicon-camera
                 %span{'ng-hide' => 'image'}
-                  Add Photo
+                  Add Photo 
+                  %span.percentage{'ng-show' => 'progressPercentage'} {{ progressPercentage + '%'}}
                 %span{'ng-show' => 'image'}
                   Photo Uploaded
                   %span.glyphicon.glyphicon-ok

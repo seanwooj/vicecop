@@ -5,6 +5,7 @@ class CheckinsController < ApplicationController
 
       # if we've already added an image, and set it in the scope in the user_vices_controller js
       # add it to the attached_images collection in the checkin.
+      # todo ADD THIS TO A DELAYED JOB. IMAGE ATTACHMENT SHOULD'T HOLD UP THE WHOLE APP.
       if params[:image]
         checkin.attached_images << AttachedImage.find(params[:image][:id])
       end
