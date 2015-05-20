@@ -2,7 +2,7 @@
   %h3 What do you want to start tracking?
 
 .search-or-add
-  %input{:type => 'text', :placeholder => 'Search or Add', 'ng-model' => 'viceSearch'}
+  %input{:type => 'text', :placeholder => 'Search or Add', 'ng-model' => 'viceSearch', 'ng-change' => 'makeParam()'}
 
 .user-vices
   %div{'ng-repeat' => 'vice in vices | filter:viceSearch'}
@@ -11,7 +11,7 @@
         {{ vice.name }}
       .user-vice-description
         This is a test description
-  %a.new-vice
+  %a.new-vice{:href => '#/vices/new/{{ viceNameParam }}', 'ng-show' => 'viceNameParam'}
     .user-vice-name
       Create {{ viceSearch }}
     .user-vice-description
