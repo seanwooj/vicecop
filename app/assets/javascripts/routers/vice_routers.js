@@ -21,6 +21,10 @@ window.app.config([
         resolve: {
           vice: ['vices', '$stateParams', function (vices, $stateParams) {
             return vices.getVice($stateParams.id);
+          }],
+
+          userVice: ['vices', '$stateParams', function (vices, $stateParams) {
+            return vices.getAllForUserAndVice($stateParams.id);
           }]
         }
       })

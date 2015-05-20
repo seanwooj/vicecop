@@ -8,6 +8,12 @@ window.app.factory('vices', [
         });
       },
 
+      getAllForUserAndVice: function (id) {
+        return $http.get('/vices/' + id + '/user_vices.json').then(function (res) {
+          return res.data;
+        });
+      },
+
       getAllVices: function () {
         $http.get('/vices.json').success(function (data) {
           angular.copy(data, o.vices);

@@ -1,7 +1,8 @@
 window.app.controller('VicesController', [
-  '$scope', 'vices', 'vice',
-  function ($scope, vices, vice) {
+  '$scope', 'vices', 'vice', 'userVice',
+  function ($scope, vices, vice, userVice) {
     $scope.vice = vice;
+    $scope.userVice = userVice;
     
     $scope.addUserVice = function () {
       vices.addUserVice(vice.id);

@@ -2,7 +2,12 @@ class UserVicesController < ApplicationController
   
   def index
     if current_user
-      render :json => current_user.user_vices, :include => :vice
+      if params[:vice_id]
+        user_vices = current_user.user_vices.where(:vice_id => params[:vice_id])
+      else
+        user_vices = current_user.user_vices 
+      end
+      render :json => user_vices, :include => :vice
     else
       render :json => {}, :status => :unauthorized
     end
