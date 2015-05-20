@@ -14,6 +14,11 @@ window.app.config([
           }]
         }
       })
+      .state('new_vice', {
+        url: '/vices/new',
+        templateUrl: 'vices/_new.html',
+        controller: 'NewVicesController'
+      })
       .state('vice', {
         url: '/vices/{id}',
         templateUrl: 'vices/_show.html',

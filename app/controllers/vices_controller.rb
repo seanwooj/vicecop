@@ -9,7 +9,7 @@ class VicesController < ApplicationController
   end
 
   def create
-
+    
   end
 
   def create_and_add_user_vice
