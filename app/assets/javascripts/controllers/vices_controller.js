@@ -3,6 +3,8 @@ window.app.controller('VicesController', [
   function ($scope, vices, vice) {
     $scope.vice = vice;
     
-
+    $scope.addUserVice = function () {
+      vices.addUserVice(vice.id);
+    };
   }
 ]);

@@ -1,4 +1,9 @@
 .section-header
   %h3 {{ vice.name }}
 
-{{ vice.user_vices.length }} tracking
+%button.add-vice.btn.btn-primary{ 'ng-click' => 'addUserVice()'}
+  Track Vice
+
+
+.tracking
+  {{ vice.user_vices.length }} tracking

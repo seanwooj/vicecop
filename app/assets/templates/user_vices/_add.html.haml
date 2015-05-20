@@ -4,15 +4,15 @@
 .search-or-add
   %input{:type => 'text', :placeholder => 'Search or Add', 'ng-model' => 'viceSearch'}
 
-.user-vices{'ng-repeat' => 'vice in vices | filter:viceSearch'}
-  %a.user-vice{:href => '#/vices/{{ vice.id }}'}
+.user-vices
+  %div{'ng-repeat' => 'vice in vices | filter:viceSearch'}
+    %a.user-vice{:href => '#/vices/{{ vice.id }}'}
+      .user-vice-name
+        {{ vice.name }}
+      .user-vice-description
+        This is a test description
+  %a.new-vice
     .user-vice-name
-      {{ vice.name }}
-    .user-vice-description
-      This is a test description
-.new-vice
-  %a.user-vice
-    .user-vice-name
-      Create Vice Name
+      Create {{ viceSearch }}
     .user-vice-description
       This activity does not exist yet. Add it!

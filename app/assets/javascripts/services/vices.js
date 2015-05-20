@@ -30,6 +30,12 @@ window.app.factory('vices', [
         return $http.post('/user_vices/' + id + '/checkins.json', checkin);
       },
 
+      addUserVice: function(id) {
+        // On the rails controller side, this should find a uservice if it already exists
+        // and reactivate it.
+        return $http.post('/user_vices.json', {vice_id: id});
+      },
+
       userVices: [],
 
       vices: []
