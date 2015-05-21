@@ -4,10 +4,10 @@ TODO:
 - add stop tracking
 - ensure that active/inactive boolean works
 	- X do not show inactive uservices on home page
-	- if an inactive uservice exists, reactivate it on vices/{id}
-	- do not show inactive uservices as being tracked on vice page.
+	- X if an inactive uservice exists, reactivate it on vices/{id}
+	- X do not show inactive uservices as being tracked on vice page.
 	- do not count inactive uservices as vices being tracked.
 
 - X add ability to create and track a new vice.
-	- redirect to new vice page when tracking.
+	- X redirect to new vice page when tracking.
 	- disallow users to go back to the new vice page for a vice that already exists

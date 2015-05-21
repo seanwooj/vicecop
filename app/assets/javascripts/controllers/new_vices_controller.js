@@ -1,10 +1,12 @@
 window.app.controller('NewVicesController', [
-  '$scope', 'vices', '$location',
-  function ($scope, vices, $location) {
+  '$scope', 'vices', '$location', '$state',
+  function ($scope, vices, $location, $state) {
     $scope.viceName = $location.search()['vice_name'];
 
     $scope.addVice = function(){
-      vices.addVice({name: $scope.viceName});
+      vices.addVice({name: $scope.viceName}).then( function (res) {
+        $state.go('user_vice', {id: res.data.id });
+      } );
     }
   }
 ]);

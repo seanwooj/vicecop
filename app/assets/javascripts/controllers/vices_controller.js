@@ -1,6 +1,6 @@
 window.app.controller('VicesController', [
-  '$scope', 'vices', 'vice', 'userVice',
-  function ($scope, vices, vice, userVice) {
+  '$scope', 'vices', 'vice', 'userVice', '$state',
+  function ($scope, vices, vice, userVice, $state) {
     $scope.vice = vice;
     // the resolve in vice/show for userVice calls the index action
     // in user_vices controller.rb -- which returns an array.
@@ -11,6 +11,7 @@ window.app.controller('VicesController', [
     $scope.addUserVice = function () {
       vices.addUserVice(vice.id).then(function (res){
         $scope.userVice = res.data;
+        $state.go('user_vice', {id: $scope.userVice.id});
       })
     };
 
