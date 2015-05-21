@@ -2,7 +2,7 @@ class UserVice < ActiveRecord::Base
   belongs_to :user
   belongs_to :vice
 
-  has_many :checkins
+  has_many :checkins, :dependent => :destroy
 
   def days_since_last_occurence
     if checkins
