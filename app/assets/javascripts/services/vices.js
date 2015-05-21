@@ -42,6 +42,10 @@ window.app.factory('vices', [
         return $http.post('/user_vices.json', {vice_id: id});
       },
 
+      deactivateUserVice: function(id) {
+        return $http.put('/user_vices/' + id + '/deactivate.json');
+      },
+
       addVice: function(vice) {
         return $http.post('/vices.json', vice);
       },

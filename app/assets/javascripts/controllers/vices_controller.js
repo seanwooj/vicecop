@@ -7,5 +7,9 @@ window.app.controller('VicesController', [
     $scope.addUserVice = function () {
       vices.addUserVice(vice.id);
     };
+
+    $scope.deactivateUserVice = function () {
+      vices.deactivateUserVice(vice.id);
+    };
   }
 ]);
