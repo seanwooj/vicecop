@@ -1,5 +1,9 @@
 nav.navbar {
+  background: $brand-primary;
   border-bottom: none;
+  .navbar-collapse {
+    background: white;
+  }
   .navbar-header {
     background: $brand-primary;
     color: white;

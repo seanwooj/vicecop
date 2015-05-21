@@ -42,6 +42,10 @@ window.app.factory('vices', [
         return $http.post('/user_vices.json', {vice_id: id});
       },
 
+      addVice: function(vice) {
+        return $http.post('/vices.json', vice);
+      },
+
       userVices: [],
 
       vices: []
