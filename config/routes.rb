@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :user_vices, :only => [:index, :show, :create, :destroy] do
+    put '/deactivate', :to => 'user_vices#deactivate'
     resources :checkins, :only => [:create]
   end
 
