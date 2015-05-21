@@ -9,6 +9,8 @@ class VicesController < ApplicationController
   end
 
   def create
+    # CREATES A VICE
+    # AND A USER VICE.
     if current_user
       vice = Vice.create(vice_params)
       user_vice = current_user.user_vices.create(:vice_id => vice.id)
@@ -16,10 +18,6 @@ class VicesController < ApplicationController
     else
       render :json => {}, :status => :unauthorized
     end
-  end
-
-  def create_and_add_user_vice
-
   end
 
   private
