@@ -1,6 +1,6 @@
 window.app.controller('NavigationController', [
-  '$scope', 'Auth',
-  function ($scope, Auth) {
+  '$scope', 'Auth', '$state',
+  function ($scope, Auth, $state) {
     $scope.signedIn = Auth.isAuthenticated;
     $scope.logout = Auth.logout;
 
@@ -18,6 +18,7 @@ window.app.controller('NavigationController', [
 
     $scope.$on('devise:logout', function (e, user){
       $scope.user = {};
+      $state.go('login');
     });
   }
 ]);
