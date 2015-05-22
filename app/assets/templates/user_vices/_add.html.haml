@@ -10,7 +10,7 @@
       .user-vice-name
         {{ vice.name }}
       .user-vice-description
-        This is a test description
+        {{ vice.description }}
   %a.new-vice{:href => '#/vices/new?{{ viceNameParam }}', 'ng-show' => 'viceNameParam'}
     .user-vice-name
       Create {{ viceSearch }}
