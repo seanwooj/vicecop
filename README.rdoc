@@ -1,13 +1,23 @@
 TODO:
 ===========
 
-- add stop tracking
-- ensure that active/inactive boolean works
+- X add stop tracking
+- X ensure that active/inactive boolean works
 	- X do not show inactive uservices on home page
 	- X if an inactive uservice exists, reactivate it on vices/{id}
 	- X do not show inactive uservices as being tracked on vice page.
-	- do not count inactive uservices as vices being tracked.
+	- do not count inactive uservices as vices being tracked. - this one is trouble.
 
 - X add ability to create and track a new vice.
 	- X redirect to new vice page when tracking.
 	- disallow users to go back to the new vice page for a vice that already exists
+
+- Add featured images to vices
+  - use attached_image model
+
+- Add validation on the login and registration
+
+- Add swipey actions on check ins (delete, edit)
+
+- X Add real descriptions to the vices.
+  - descriptions should be truncated for the home page view

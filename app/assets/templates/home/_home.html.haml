@@ -7,6 +7,6 @@
   %a.user-vice{:href => '#/user_vices/{{userVice.id}}'}
     .user-vice-name
       {{ userVice.vice.name }}
-    .user-vice-description
-      This is a test description
+    .user-vice-description{'ng-show' => 'userVice.vice.description'}
+      {{ userVice.vice.description }}
     %span.user-vice-arrow-right.glyphicon.glyphicon-chevron-right

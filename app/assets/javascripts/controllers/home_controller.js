@@ -6,7 +6,7 @@ window.app.controller('HomeController', [
     // at some point would like to move this up to a higher
     // scope to cover all places wed like to ensure a user
     // is logged in.
-    
+
     Auth.currentUser().then(function (user) {
       $scope.vices = vices.userVices;
     }, function () {
