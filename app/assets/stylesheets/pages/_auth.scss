@@ -1,7 +1,26 @@
 #login, #register {
+  .form-group {
+    width: 100%;
+  }
   .input-group {
     width: 100%;
     margin-bottom: 10px;
+
+    ::-webkit-input-placeholder {
+       color: rgba(255,255,255,0.6);
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: rgba(255,255,255,0.6);  
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: rgba(255,255,255,0.6);  
+    }
+
+    :-ms-input-placeholder {  
+       color: rgba(255,255,255,0.6);  
+    }
 
     input {
       border: 1px solid transparent;
@@ -20,7 +39,7 @@
   .login-greeting {
     width: 80%;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 
   .login-small-print {

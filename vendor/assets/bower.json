@@ -9,6 +9,7 @@
     "foundation-icon-fonts": "latest",
     "moment": "latest",
     "angular-animate": "latest",
-    "ng-file-upload": "latest"
+    "ng-file-upload": "latest",
+    "csshake": "latest"
   }
 }

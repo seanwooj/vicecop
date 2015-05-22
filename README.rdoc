@@ -12,12 +12,17 @@ TODO:
 	- X redirect to new vice page when tracking.
 	- disallow users to go back to the new vice page for a vice that already exists
 
+- Clean up UI of add. make it look snazzy.
+
 - Add featured images to vices
   - use attached_image model
 
 - Add validation on the login and registration
+  - X add validation on login (shake if it isn't correct)
 
 - Add swipey actions on check ins (delete, edit)
 
 - X Add real descriptions to the vices.
   - descriptions should be truncated for the home page view
+
+- Add location functionality.

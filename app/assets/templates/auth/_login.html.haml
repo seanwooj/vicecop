@@ -5,10 +5,11 @@
     %h4 Great to see you again!
     %p Always remember that every day is a new day and a new step forward.
   %form{'ng-submit' => 'login()'}
-    .input-group
-      %input.form-control{:type => 'email', :placeholder => 'Email', 'ng-model' => 'user.email'}
-    .input-group
-      %input.form-control{:type => 'password', :placeholder => 'Password', 'ng-model' => 'user.password'}
+    .form-group
+      .input-group
+        %input.form-control{:type => 'email', :placeholder => 'Email', 'ng-model' => 'user.email'}
+      .input-group
+        %input.form-control{:type => 'password', :placeholder => 'Password', 'ng-model' => 'user.password'}
 
     .login-small-print{'ng-include' => "'auth/_small_print.html'"}
     %input.btn.btn-full-width.btn-primary{:type => 'submit', :value => 'Login'}
