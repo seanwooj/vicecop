@@ -9,7 +9,7 @@
         %form{'ng-submit' => 'addCheckin()'}
           .checkin-bar
             .location
-              %a{'ng-click' => 'addLocation()'}
+              %a{'ng-click' => 'addLocation()', 'ng-class' => '{"uploaded" : latitude}'}
                 %span.glyphicon.glyphicon-map-marker
                 %span{'ng-hide' => 'latitude'}
                   Add Location

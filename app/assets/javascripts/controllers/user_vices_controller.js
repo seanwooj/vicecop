@@ -22,17 +22,19 @@ window.app.controller('UserVicesController', [
     $scope.addLocation = function () {
       // NEED TO ADD SOME SORT OF BLOCK TO SUBMISSION
       // UNTIL GEOLOCATION FINISHES OR FAILS.
+      console.log('happened');
       if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(function (position){
+          console.log('got into here');
           $scope.latitude = position.coords.latitude;
           $scope.longitude = position.coords.longitude;
+          console.log($scope.latitude);
         });
       } else {
         alert('Geolocation not available! Sorry :(');
       }
       
     };
-
 
     // FROM
     // https://github.com/danialfarid/ng-file-upload
@@ -57,7 +59,13 @@ window.app.controller('UserVicesController', [
           });
         }
       }
-    }
+    };
+
+    // BUG - for whatever reason, this does not show up as adding the location
+    // in checkins.html.haml -- even though there is a hide. only shows up once clicked.
+    // however, this ensures that when the user clicks on the button, there is a response
+    // in the UX to show that location has been added.
+    $scope.addLocation();
 
   }
 ]);
