@@ -8,13 +8,29 @@ window.app.controller('UserVicesController', [
       if (!$scope.note) { return ;}
       vices.addCheckin($stateParams.id, {
         note: $scope.note,
-        image: $scope.image
+        image: $scope.image,
+        latitude: $scope.latitude,
+        longitude: $scope.longitude
       })
       .success(function (checkin) {
         $scope.userVice.checkins.push(checkin);
         $state.go('user_vice', {id: $stateParams.id});
       });
       $scope.note = '';
+    };
+
+    $scope.addLocation = function () {
+      // NEED TO ADD SOME SORT OF BLOCK TO SUBMISSION
+      // UNTIL GEOLOCATION FINISHES OR FAILS.
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position){
+          $scope.latitude = position.coords.latitude;
+          $scope.longitude = position.coords.longitude;
+        });
+      } else {
+        alert('Geolocation not available! Sorry :(');
+      }
+      
     };
 
 

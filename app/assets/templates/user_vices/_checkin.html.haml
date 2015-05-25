@@ -11,7 +11,10 @@
             .location
               %a{'ng-click' => 'addLocation()'}
                 %span.glyphicon.glyphicon-map-marker
-                Add Location
+                %span{'ng-hide' => 'latitude'}
+                  Add Location
+                %span{'ng-show' => 'latitude'}
+                  Location Added
             .image
               %a{"ng-model" => "files", "ngf-select" => "", 'ng-class' => "{'uploaded' : image}"}
                 %span.glyphicon.glyphicon-camera

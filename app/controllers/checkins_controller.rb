@@ -19,6 +19,6 @@ class CheckinsController < ApplicationController
   private
 
   def checkin_params
-    params.require(:checkin).permit(:note)
+    params.require(:checkin).permit(:note, :longitude, :latitude)
   end
 end

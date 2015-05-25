@@ -18,7 +18,8 @@ TODO:
   - use attached_image model
 
 - Add validation on the login and registration
-  - X add validation on login (shake if it isn't correct)
+  - X add validation on login (shake if it isn't the correct authorizaiton info)
+  - add validations on registration before getting to the server.
 
 - Add swipey actions on check ins (delete, edit)
 
