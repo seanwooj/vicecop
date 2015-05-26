@@ -1,6 +1,6 @@
 window.app.controller('UserVicesController', [
-  '$scope', 'vices', 'userVice', '$stateParams', '$state', 'Upload',
-  function ($scope, vices, userVice, $stateParams, $state, Upload) {
+  '$scope', 'vices', 'userVice', '$stateParams', '$state', 'Upload', 'imageResizingService',
+  function ($scope, vices, userVice, $stateParams, $state, Upload, imageResizingService) {
     $scope.userVice = userVice;
     $scope.moment = moment;
 
@@ -22,13 +22,10 @@ window.app.controller('UserVicesController', [
     $scope.addLocation = function () {
       // NEED TO ADD SOME SORT OF BLOCK TO SUBMISSION
       // UNTIL GEOLOCATION FINISHES OR FAILS.
-      console.log('happened');
       if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(function (position){
-          console.log('got into here');
           $scope.latitude = position.coords.latitude;
           $scope.longitude = position.coords.longitude;
-          console.log($scope.latitude);
         });
       } else {
         alert('Geolocation not available! Sorry :(');
@@ -46,17 +43,25 @@ window.app.controller('UserVicesController', [
       if ( files && files.length ) {
         for (var i = 0; i < files.length; i++) {
           var file = files[i];
-          Upload.upload({
-            url: '/attached_images.json',
-            file: file,
-            fields: {name: file.name}
-          })
-          .progress(function (evt) {
-            $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          })
-          .success(function(data, status, headers, config) {
-            $scope.image = data;
-          });
+          if (file.type.match(/image.*/)) {
+            file = imageResizingService(file, function (file){
+
+              Upload.upload({
+                url: '/attached_images.json',
+                file: file,
+                fields: {name: file.name}
+              })
+              .progress(function (evt) {
+                $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+              })
+              .success(function(data, status, headers, config) {
+                $scope.image = data;
+              });
+
+            });
+          }
+
+
         }
       }
     };
