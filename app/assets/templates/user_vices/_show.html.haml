@@ -13,9 +13,8 @@
   %h4.section-subheader Check Ins
 
   %div{'ng-show' => 'userVice.checkins.length', 'ng-repeat' => 'checkin in userVice.checkins | orderBy: "created_at": true'}
-    .checkin
-      .checkin-thumbnail{'ng-show' => 'checkin.attached_images.length'}
-        %img{'ng-src' => '{{ checkin.attached_images[0].thumbnail_url }}' }
+    .checkin{'ng-class' => '{"image": checkin.attached_images.length}'}
+      .checkin-thumbnail{'ng-show' => 'checkin.attached_images.length', :style => 'background-image: url({{ checkin.attached_images[0].thumbnail_url }})'}
       .note{'ng-class' => '{"thumbnail-attached": checkin.attached_images.length}'}
         %span.glyphicon.glyphicon-comment
         {{ checkin.note }}

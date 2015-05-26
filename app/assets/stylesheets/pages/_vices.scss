@@ -49,11 +49,17 @@
     padding: 10px;
     border-bottom: 1px solid darken($brand-primary, 10%);
     .checkin-thumbnail {
-      height: 100px; width: 100px;
-      display: inline-block;
-      img {
-        width: 100%;
-      }
+      height: 75px; width: 75px;
+      float: left;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .note {
+      width: calc(100% - 75px);
+      display: block;
+      float: left;
+      padding-left: 10px;
     }
 
     .glyphicon {
