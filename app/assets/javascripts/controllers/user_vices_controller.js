@@ -45,7 +45,6 @@ window.app.controller('UserVicesController', [
           var file = files[i];
           if (file.type.match(/image.*/)) {
             file = imageResizingService(file, function (file){
-
               Upload.upload({
                 url: '/attached_images.json',
                 file: file,
