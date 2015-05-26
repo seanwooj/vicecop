@@ -1,4 +1,6 @@
 class Checkin < ActiveRecord::Base
+  reverse_geocoded_by :latitude, :longitude
+
   belongs_to :user_vice
   belongs_to :user
 

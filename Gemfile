@@ -18,6 +18,7 @@ gem 'unicorn'
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
+gem 'geocoder'
 
 
 group :development, :test do
