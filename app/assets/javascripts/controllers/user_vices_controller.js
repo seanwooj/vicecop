@@ -1,8 +1,12 @@
 window.app.controller('UserVicesController', [
-  '$scope', 'vices', 'userVice', '$stateParams', '$state', 'Upload', 'imageResizingService',
-  function ($scope, vices, userVice, $stateParams, $state, Upload, imageResizingService) {
+  '$scope', 'vices', 'userVice', '$stateParams',
+  '$state', 'Upload', 'imageResizingService',
+  'counterService',
+  function ($scope, vices, userVice, $stateParams, $state, Upload, imageResizingService, counterService) {
     $scope.userVice = userVice;
     $scope.moment = moment;
+    $scope.counter = counterService(userVice);
+    
 
     $scope.addCheckin = function () {
       if (!$scope.note) { return ;}

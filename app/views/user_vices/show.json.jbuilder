@@ -1,4 +1,4 @@
-json.(@user_vice, :id, :vice_id, :vice)
+json.(@user_vice, :id, :vice_id, :vice, :last_checkin_time)
 
 unless @user_vice.checkins.nil?
   json.checkins(@user_vice.checkins) do |checkin|

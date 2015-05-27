@@ -8,6 +8,16 @@
       .add-checkin
         %a.btn-checkin{:href => '#/user_vices/{{ userVice.id }}/checkin'}
           %span.glyphicon.glyphicon-plus
+      .user-vice-counter.counter-clock
+        .counter-wrap.cf
+          .day-wrap
+            {{ counter.days_since }}
+          .hour-wrap
+            {{ counter.hours_since }}
+          .minute-wrap
+            {{ counter.minutes_since }}
+          .second-wrap
+            {{ counter.seconds_since }}
 
 .checkins
   %h4.section-subheader Check Ins

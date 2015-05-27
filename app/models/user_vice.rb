@@ -4,15 +4,28 @@ class UserVice < ActiveRecord::Base
 
   has_many :checkins, :dependent => :destroy
 
-  def days_since_last_occurence
-    if checkins
-      (Date.today - checkins.last.created_at.to_date).to_i
+  def last_checkin_time
+    unless checkins.empty?
+      checkins.last.created_at
     else
-      nil
+      created_at
     end
   end
 
-  def to_json(options = {})
-    super(options.merge(:include => [:vice, :checkins]))
+  def seconds_since_last_checkin
+    Time.now - last_checkin_time
   end
+
+  def minutes_since_last_checkin
+    seconds_since_last_checkin / 60
+  end
+
+  def hours_since_last_checkin
+    minutes_since_last_checkin / 60
+  end
+
+  def days_since_last_checkin
+    hours_since_last_checkin / 24
+  end
+
 end
