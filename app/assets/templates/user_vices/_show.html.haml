@@ -11,13 +11,25 @@
       .user-vice-counter.counter-clock
         .counter-wrap.cf
           .day-wrap
-            {{ counter.days_since }}
+            .counter-count
+              {{ counter.days_since }}
+            .counter-type
+              Days
           .hour-wrap
-            {{ counter.hours_since }}
+            .counter-count
+              {{ counter.hours_since }}
+            .counter-type
+              Hours
           .minute-wrap
-            {{ counter.minutes_since }}
+            .counter-count
+              {{ counter.minutes_since }}
+            .counter-type
+              Minutes
           .second-wrap
-            {{ counter.seconds_since }}
+            .counter-count
+              {{ counter.seconds_since }}
+            .counter-type
+              Seconds
 
 .checkins
   %h4.section-subheader Check Ins
