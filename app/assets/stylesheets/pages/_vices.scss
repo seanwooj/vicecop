@@ -143,11 +143,45 @@
   }
 }
 
+.vice-show, .vice-new {
+  .masthead {
+    .masthead-cta {
+      width: 120px;
+      bottom: 72px;
+      .add-vice {
+        height: 40px;
+        width: 120px;
+      }
+    }
+
+    .section-header {
+      padding-top: 26px;
+      padding-bottom: 20px;
+      .tracking {
+        color: #999;
+      }
+    }
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+.vice-new {
+  .masthead {
+    .masthead-cta {
+      bottom: 53px;
+    }
+  }
+}
+
 .btn-checkin {
   padding: 20px;
   background: $brand-primary;
   color: white;
   display: inline-block;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.05);
 }
 
 .search-or-add {

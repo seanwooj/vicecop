@@ -36,6 +36,33 @@ nav.navbar {
   }
 }
 
+.masthead {
+  position: relative;
+  margin-top: 50px;
+  .section-header {
+    margin-top: 0px;
+  }
+  .masthead-image {
+    .masthead-image-div {
+      background-size: cover;
+      background-position: center center;
+      height: 200px;
+
+      &.masthead-image-default {
+        background: image-url("default-bg.png") repeat;
+      }
+    }
+  }
+
+  .masthead-cta {
+    position: absolute;
+    bottom: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+}
+
 .section-subheader {
   background: white;
   padding: 10px;

@@ -1,11 +1,17 @@
-.section-header
-  %h3 {{ vice.name }}
+.vice-show
+  .masthead
+    .masthead-image
+      .masthead-image-div{'ng-show' => 'vice.featured_image', :style => 'background: url({{ vice.featured_image.image_url }})'}
+      .masthead-image-div.masthead-image-default{'ng-hide' => 'vice.featured_image'}
+      .masthead-cta
+        %button.add-vice.btn.btn-primary{'ng-hide' => 'userVice.active', 'ng-click' => 'addUserVice()'}
+          Start Tracking
 
-%button.add-vice.btn.btn-primary{'ng-hide' => 'userVice.active', 'ng-click' => 'addUserVice()'}
-  Start Tracking
-
-%button.add-vice.btn.btn-primary{'ng-show' => 'userVice.active', 'ng-click' => 'deactivateUserVice()'}
-  Stop Tracking
-
-.tracking
-  {{ vice.user_vices.length }} tracking
+        %button.add-vice.btn.btn-primary{'ng-show' => 'userVice.active', 'ng-click' => 'deactivateUserVice()'}
+          Stop Tracking
+    .section-header
+      %h3 {{ vice.name }}
+      .tracking
+        {{ vice.user_vices.length }} tracking
+  .content
+    {{ vice.description }}

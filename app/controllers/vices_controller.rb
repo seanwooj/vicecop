@@ -5,7 +5,8 @@ class VicesController < ApplicationController
   end
 
   def show
-    render :json => Vice.find(params[:id]), :include => :user_vices
+    @vice = Vice.find(params[:id])
+    render 'vices/show'
   end
 
   def create

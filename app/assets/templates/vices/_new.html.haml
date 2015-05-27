@@ -1,5 +1,12 @@
-.section-header
-  %h3 {{ viceName }}
+.vice-new
+  .masthead
+    .masthead-image
+      .masthead-image-div.masthead-image-default
+      .masthead-cta
+        %button.add-vice.btn.btn-primary{'ng-click' => 'addVice()'}
+          Start Tracking
+    .section-header
+      %h3 {{ viceName }}
+  .content
+    Ready to start tracking this behavior? Join and check in to track!
 
-%button.add-vice.btn.btn-primary{'ng-click' => 'addVice()'}
-  Start Tracking
