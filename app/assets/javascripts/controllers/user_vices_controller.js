@@ -6,6 +6,10 @@ window.app.controller('UserVicesController', [
     $scope.userVice = userVice;
     $scope.moment = moment;
     $scope.counter = counterService(userVice);
+
+    $scope.goBack = function () {
+      window.history.back();
+    };
     
 
     $scope.addCheckin = function () {

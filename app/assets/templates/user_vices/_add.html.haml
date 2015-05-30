@@ -1,5 +1,9 @@
-.section-header
-  %h3 What do you want to start tracking?
+.section-header.cf
+  %a.section-header-link-left{'ng-click' => 'goBack()'}
+    %span.glyphicon.glyphicon-chevron-left
+  %h3.with-links Add behavior
+.section-subheader.blue
+  %h5 What do you want to start tracking? Search for behaviors to track or create a new one.
 
 .search-or-add
   %input{:type => 'text', :placeholder => 'Search or Add', 'ng-model' => 'viceSearch', 'ng-change' => 'makeParam()'}

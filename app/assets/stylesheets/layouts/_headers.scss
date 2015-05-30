@@ -23,16 +23,38 @@ nav.navbar {
 .section-header {
   margin: 0 auto;
   margin-top: 50px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   text-align: center;
   background: white;
   box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
   h1, h2, h3, h4, h5, h6 {
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 100;
     color: black;
+    &.with-links {
+      width: calc(100% - 80px);
+      float: left;
+    }
+  }
+
+  .section-header-link-left, .section-header-link-right {
+    padding: 17px 12px;
+    min-height: 50px;
+    width: 40px;
+
+    &.section-header-link-left {
+      float: left;
+      border-right: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0px 0px 2px rgba(0,0,0,0.03);
+    }
+
+    &.section-header-link-right {
+      float: right;
+      border-right: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0px 0px 2px rgba(0,0,0,0.03);
+    }
   }
 }
 
@@ -69,4 +91,9 @@ nav.navbar {
   font-weight: 100;
   text-align: center;
   margin-bottom: 0;
+
+  &.blue {
+    background: $brand-primary;
+    color: white;
+  }
 }

@@ -7,6 +7,10 @@ window.app.controller('VicesController', [
     // because of this, we should grab the first item in the array,
     // which should be the only item.
     $scope.userVice = userVice[0];
+
+    $scope.goBack = function () {
+      window.history.back();
+    };
     
     $scope.addUserVice = function () {
       vices.addUserVice(vice.id).then(function (res){

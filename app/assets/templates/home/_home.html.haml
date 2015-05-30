@@ -1,8 +1,10 @@
 .section-header
-  %h3 Vices
+  %h3 Behaviors
 
-%a.btn-checkin.btn-full-width.btn{:href => '#/user_vices/add'}
-  %span.glyphicon.glyphicon-plus
+.btn-center-wrapper
+  %a.btn-add-tracking.btn{:href => '#/user_vices/add'}
+    %span.glyphicon.glyphicon-plus
+    .btn-text Track a new behavior
 .user-vices{'ng-repeat' => 'userVice in vices | filter: {active: true}'}
   %a.user-vice{:href => '#/user_vices/{{userVice.id}}'}
     .user-vice-name
