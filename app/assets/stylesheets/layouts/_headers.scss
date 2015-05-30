@@ -61,6 +61,15 @@ nav.navbar {
 .masthead {
   position: relative;
   margin-top: 50px;
+
+  .masthead-link-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+  }
+
   .section-header {
     margin-top: 0px;
   }

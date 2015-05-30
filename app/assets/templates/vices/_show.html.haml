@@ -1,5 +1,7 @@
 .vice-show
   .masthead
+    %a.masthead-link-left{'ng-click' => 'goBack()'}
+      %span.glyphicon.glyphicon-chevron-left
     .masthead-image
       .masthead-image-div{'ng-show' => 'vice.featured_image', :style => 'background: url({{ vice.featured_image.image_url }})'}
       .masthead-image-div.masthead-image-default{'ng-hide' => 'vice.featured_image'}
