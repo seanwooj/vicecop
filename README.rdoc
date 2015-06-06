@@ -12,7 +12,7 @@ TODO:
 	- X redirect to new vice page when tracking.
 	- disallow users to go back to the new vice page for a vice that already exists
 
-- Clean up UI of add. make it look snazzy.
+- Clean up UI of add. make it look snazzy. X
 
 - Add featured images to vices
   - use attached_image model
